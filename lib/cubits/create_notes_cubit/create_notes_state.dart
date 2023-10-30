@@ -5,6 +5,8 @@ abstract class CreateNotesState {}
 
 class CreateNotesInitial extends CreateNotesState {}
 
+class CreateNotesSuccess extends CreateNotesState {}
+
 
 
 
