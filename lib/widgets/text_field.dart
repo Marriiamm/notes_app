@@ -17,11 +17,11 @@ class CustomField extends StatelessWidget {
           return "field is required";
         }else{return null;}
       },
-      cursorColor: Color.fromARGB(255, 47, 145, 178),
+      cursorColor: const Color.fromARGB(255, 47, 145, 178),
       maxLines: maxLines,
       decoration: InputDecoration(
         hintText: hint,
-        hintStyle: TextStyle(
+        hintStyle: const TextStyle(
           fontSize: 19
         ),
         focusedBorder: OutlineInputBorder(

@@ -5,14 +5,16 @@ import 'package:notes_app/cubits/create_notes_cubit/create_notes_cubit.dart';
 import 'package:notes_app/widgets/add_note_form.dart';
 
 class AddNote extends StatelessWidget {
-  AddNote({super.key});
+  const AddNote({super.key});
 
+  @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => AddNoteCubit(),
       child: BlocConsumer<AddNoteCubit, AddNoteState>(
         listener: (context, state) {
           if (state is AddNoteFailure) {
+            // ignore: avoid_print
             print(" failed ${state.errMessage}");
           }
           if (state is AddNoteSuccess) {
