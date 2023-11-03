@@ -5,6 +5,7 @@ import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/widgets/custom_app_bar.dart';
 import 'package:notes_app/widgets/edit_note_color_list.dart';
 import 'package:notes_app/widgets/text_field.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class EditNoteBody extends StatefulWidget {
   const EditNoteBody({super.key, required this.notee});
@@ -30,6 +31,14 @@ class _EditNoteBodyState extends State<EditNoteBody> {
               widget.notee.save();
               BlocProvider.of<NotesCubit>(context).fetchAllNotes();
               Navigator.pop(context);
+              Fluttertoast.showToast(
+                msg: "Note Edited Successfully",
+                toastLength: Toast.LENGTH_SHORT,
+                gravity: ToastGravity.CENTER,
+                backgroundColor: Colors.black.withOpacity(0.7),
+                textColor: Colors.white,
+                fontSize: 16.0
+              );
             },
             barTitle: "Edit Note",
             icon: Icons.check,

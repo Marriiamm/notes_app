@@ -38,6 +38,7 @@ dependencies:
   bloc: ^8.1.2
   intl: ^0.18.1
   another_flutter_splash_screen: ^1.2.0
+  fluttertoast: ^8.2.2
   
 
 dev_dependencies:
