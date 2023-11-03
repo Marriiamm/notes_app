@@ -6,9 +6,11 @@ import 'package:notes_app/constants.dart';
 import 'package:notes_app/cubits/create_notes_cubit/create_notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/simple_bloc_observer.dart';
-import 'package:notes_app/views/notes_view.dart';
+import 'package:notes_app/splash.dart';
+//import 'package:notes_app/views/notes_view.dart';
 
 void main() async{
+  
   initializeDateFormatting();
   await Hive.initFlutter();
   Bloc.observer =SimpleBlocObserver();
@@ -31,7 +33,7 @@ class NotesApp extends StatelessWidget {
           fontFamily: "Dosis",
           scaffoldBackgroundColor: Colors.white,
         ),
-        home:const NotesView(),
+        home:const SplashView(),
       ),
     );
   }

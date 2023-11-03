@@ -56,7 +56,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             builder: (context, state) {
               return AddNoteButton(
                 isLoading: state is AddNoteLoading ? true : false,
-                onTap: () {
+                onTap: () {                  
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
                     DateTime noww = DateTime.now();
@@ -71,6 +71,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                     autovalidateMode = AutovalidateMode.always;
                     setState(() {});
                   }
+                 
                 },
               );
             },
