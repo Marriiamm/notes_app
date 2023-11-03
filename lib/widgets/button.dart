@@ -13,7 +13,7 @@ class AddNoteButton extends StatelessWidget {
         height: 60,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.0),
-          color: const Color(0xff22668D),
+          color: Color.fromARGB(255, 76, 173, 167),
         ),
         child: Center(
             child: isLoading

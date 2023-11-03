@@ -9,33 +9,30 @@ class CustomField extends StatelessWidget {
   final Function(String)? onChanged;
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      onChanged: onChanged,
-      onSaved: onSaved,
-      validator: (value){
-        if(value?.isEmpty ?? true){
-          return "field is required";
-        }else{return null;}
-      },
-      cursorColor: const Color.fromARGB(255, 47, 145, 178),
-      maxLines: maxLines,
-      decoration: InputDecoration(
-        hintText: hint,
-        hintStyle: const TextStyle(
-          fontSize: 19
+    return Container(
+      padding: EdgeInsets.only(left:10),
+      decoration: BoxDecoration(
+        color: Color.fromARGB(255, 236, 236, 236),
+        borderRadius: BorderRadius.circular(20)
+      ),
+      child: TextFormField(
+        onChanged: onChanged,
+        onSaved: onSaved,
+        validator: (value){
+          if(value?.isEmpty ?? true){
+            return "field is required";
+          }else{return null;}
+        },
+        cursorColor: const Color.fromARGB(255, 47, 145, 178),
+        maxLines: maxLines,
+        decoration: InputDecoration(
+          hintText: hint,
+          hintStyle: const TextStyle(
+            fontSize: 19
+          ),
+          border: InputBorder.none,
+          
         ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15),
-          borderSide: const BorderSide(
-            width: 2.0,
-            color: Color.fromARGB(255, 47, 145, 178)),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15),
-          borderSide: const BorderSide(
-            width: 2.0,
-            color: Color.fromARGB(255, 47, 145, 178)),
-        )
       ),
     );
   }
