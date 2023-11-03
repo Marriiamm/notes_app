@@ -9,7 +9,14 @@ class EditPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: EditNoteBody(notee: notte,),
+      body: Container(
+        constraints: const BoxConstraints.expand(),
+        decoration: const BoxDecoration(
+        image: DecorationImage(
+        image: AssetImage("assets/images/homee.png"), 
+        fit: BoxFit.cover),
+  ),
+        child: EditNoteBody(notee: notte,)),
     );
   }
 }

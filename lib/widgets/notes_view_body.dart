@@ -23,7 +23,7 @@ class _NotesViewBodyState extends State<NotesViewBody> {
       padding: EdgeInsets.symmetric(horizontal:24.0),
       child: Column(
         children: [
-          SizedBox(height: 30,),
+          SizedBox(height: 40,),
           CustomAppBar(
             barTitle: "Notes",
             icon: Icons.search,

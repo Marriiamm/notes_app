@@ -10,9 +10,9 @@ class CustomField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left:10),
+      padding: const EdgeInsets.only(left:10),
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 236, 236, 236),
+        color: Color.fromARGB(255, 225, 240, 239),
         borderRadius: BorderRadius.circular(20)
       ),
       child: TextFormField(

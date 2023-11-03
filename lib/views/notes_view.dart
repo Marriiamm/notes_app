@@ -9,7 +9,7 @@ class NotesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color(0xff22668D),
+        backgroundColor: const Color.fromARGB(255, 60, 151, 145),
         onPressed: () {
           showModalBottomSheet(
               isScrollControlled: true,
@@ -22,7 +22,14 @@ class NotesView extends StatelessWidget {
         },
         child: const Icon(Icons.add),
       ),
-      body: const NotesViewBody(),
+      body: Container(
+        constraints: const BoxConstraints.expand(),
+        decoration: const BoxDecoration(
+        image: DecorationImage(
+        image: AssetImage("assets/images/homee.png"), 
+        fit: BoxFit.cover),
+  ),
+        child: const NotesViewBody()),
     );
   }
 }
